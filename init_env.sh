@@ -22,7 +22,7 @@ if [ ! -f $md5 ] ; then
   conda activate test2
   pip install -r requirements.txt
   conda deactivate
-  bash ./init_docker.sh
+#  bash ./init_docker.sh
   exit
 fi
 
@@ -31,13 +31,13 @@ fi
 requirements_md5_old=$(cat $md5|sed 's/ //g')
 if [ "$requirements_md5_new" == "$requirements_md5_old" ] ; then
 	echo "not change"
-	bash ./init_docker.sh
+#	bash ./init_docker.sh
 else
 	createrequirementsmd5
 	conda activate test2
   pip install -r requirements.txt
   conda deactivate
-  bash ./init_docker.sh
+#  bash ./init_docker.sh
 fi
 
 
