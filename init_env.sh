@@ -17,11 +17,11 @@ function createrequirementsmd5(){
 
 if [ ! -f $md5 ] ; then
 	createrequirementsmd5
-  conda create -y python=3.7 --prefix=/root/anaconda3/envs/test2
+  /root/anaconda3/bin/conda create -y python=3.7 --prefix=/root/anaconda3/envs/test2
   echo "end"
-  conda activate test2
+  /root/anaconda3/bin/conda activate test2
   pip install -r requirements.txt
-  conda deactivate
+  /root/anaconda3/bin/conda deactivate
 #  bash ./init_docker.sh
   exit
 fi
