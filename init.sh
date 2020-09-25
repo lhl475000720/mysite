@@ -17,7 +17,7 @@ md5=package_md5
 #dockerfile = /home/lei/app/test2/www/Dockerfile
 #dockerfile_md5 = dockerfile_md5_package
 
-requirements_md5_new=$(md5sum -b $requirements | awk '{print $1}'|sed 's/ //g')
+#requirements_md5_new=$(md5sum -b $requirements | awk '{print $1}'|sed 's/ //g')
 #dockerfile_md5_new = $(md5sum -b $dockerfile | awk '{print $1}'|sed 's/ //g')
 
 
