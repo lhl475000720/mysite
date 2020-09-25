@@ -2,10 +2,10 @@ cd /home/lei/app
 
 if [ ! -d "/home/lei/app/test2/" ] ; then
   sudo mkdir test2 test2/conf test2/logs test2/www
-  ls
+  cd /home/lei/app/test2/www
+  $PWD
 else
   cd /home/lei/app/test2/www
-  ls
 fi
 
 sudo docker cp jenkins-test:/var/jenkins_home/workspace/test2/. /home/lei/app/test2/www
