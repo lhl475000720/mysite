@@ -1,6 +1,6 @@
 cd /home/lei/app
 sudo mkdir test2 test2/conf test2/logs test2/www
-sudo docker cp jenkins-test:/var/jenkins_home/workspace/test01/. /home/lei/app/test2/www
+sudo docker cp jenkins-test:/var/jenkins_home/workspace/test2/. /home/lei/app/test2/www
 conda create -n test2 python=3.7
 
 image_name=''
