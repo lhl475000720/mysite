@@ -1,4 +1,4 @@
-
+whoami
 requirements=/home/lei/app/test2/www/requirements.txt
 md5=package_md5
 
