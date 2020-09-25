@@ -47,7 +47,7 @@ else
 fi
 
 
-image_file_md5_old=$(cat $md5|sed 's/ //g')
+image_file_md5_old=$(cat $image_file_md5|sed 's/ //g')
 if [ "$image_file_md5_new" == "$image_file_md5_old" ] ; then
 	docker restart test2
 else
