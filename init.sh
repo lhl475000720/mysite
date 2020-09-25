@@ -6,9 +6,6 @@ else
   cd /home/lei/app/test2/www
 fi
 
-$PWD
-ls
-
 sudo docker cp jenkins-test:/var/jenkins_home/workspace/test2/. /home/lei/app/test2/www
 
 
@@ -17,24 +14,24 @@ image_name=''
 requirements=/home/lei/app/test2/www/requirements.txt
 md5=package_md5
 
-dockerfile = /home/lei/app/test2/www/Dockerfile
-dockerfile_md5 = dockerfile_md5_package
+#dockerfile = /home/lei/app/test2/www/Dockerfile
+#dockerfile_md5 = dockerfile_md5_package
 
 requirements_md5_new=$(md5sum -b $requirements | awk '{print $1}'|sed 's/ //g')
-dockerfile_md5_new = $(md5sum -b $dockerfile | awk '{print $1}'|sed 's/ //g')
+#dockerfile_md5_new = $(md5sum -b $dockerfile | awk '{print $1}'|sed 's/ //g')
 
 
 function createrequirementsmd5(){
      sudo echo $requirements_md5_new > $md5
 }
 
-function createdockerfilemd5() {
-    sudo echo $dockerfile_md5_new > $dockerfile
-}
+#function createdockerfilemd5() {
+#    sudo echo $dockerfile_md5_new > $dockerfile
+#}
 
-function initcontainer(){
-  sudo docker run -p 10010:80 --name=test2 -v /home/lei/app/test2/www/:/user/local/apache2/htdocs/ -v /home/lei/app/test2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf -v /home/lei/app/test2/logs/:/usr/local/apache2/logs/ -v /home/lei/anaconda3/envs/test2:/usr/local/anaconda -d $image_name
-}
+#function initcontainer(){
+#  sudo docker run -p 10010:80 --name=test2 -v /home/lei/app/test2/www/:/user/local/apache2/htdocs/ -v /home/lei/app/test2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf -v /home/lei/app/test2/logs/:/usr/local/apache2/logs/ -v /home/lei/anaconda3/envs/test2:/usr/local/anaconda -d $image_name
+#}
 
 if [ ! -f $md5 ] ; then
 	createrequirementsmd5
