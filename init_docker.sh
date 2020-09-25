@@ -21,7 +21,7 @@ fi
 
 image_file_md5_old=$(cat $image_file_md5|sed 's/ //g')
 if [ "$image_file_md5_new" == "$image_file_md5_old" ] ; then
-	docker restart test2
+	docker run restart test2
 else
 	docker stop test2
 	docker rm test2
