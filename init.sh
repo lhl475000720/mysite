@@ -1,7 +1,7 @@
 cd /home/lei/app
 sudo mkdir test2 test2/conf test2/logs test2/www
 sudo docker cp jenkins-test:/var/jenkins_home/workspace/test2/. /home/lei/app/test2/www
-conda create -n test2 python=3.7
+conda create -n test2 python=3.7 --prefix=/root/anaconda3/envs/test2
 #
 #image_name=''
 #
