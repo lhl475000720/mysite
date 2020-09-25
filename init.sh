@@ -21,9 +21,9 @@ md5=package_md5
 #dockerfile_md5_new = $(md5sum -b $dockerfile | awk '{print $1}'|sed 's/ //g')
 
 
-function createrequirementsmd5(){
-     sudo echo $requirements_md5_new > $md5
-}
+#function createrequirementsmd5(){
+#     sudo echo $requirements_md5_new > $md5
+#}
 
 #function createdockerfilemd5() {
 #    sudo echo $dockerfile_md5_new > $dockerfile
