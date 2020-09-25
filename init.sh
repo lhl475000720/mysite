@@ -5,6 +5,10 @@ if [ ! -d "/home/lei/app/test2/"];then
 else
   cd /home/lei/app/test2/www
 fi
+
+$PWD
+ls
+
 sudo docker cp jenkins-test:/var/jenkins_home/workspace/test2/. /home/lei/app/test2/www
 
 
