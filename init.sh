@@ -1,5 +1,6 @@
 cd /home/lei/app
 mkdir test2 test2/conf test2/logs test2/www
+docker cp jenkins-test:/var/jenkins_home/workspace/test01/. /home/lei/app/test2/www
 conda create -n test2 python=3.7
 
 image_name=''
@@ -54,7 +55,7 @@ fi
 
 dockerfile_md5_old=$(cat $md5|sed 's/ //g')
 if [ "$dockerfile_md5_new" == "$dockerfile_md5_old" ] ; then
-	echo "not change"
+	docker restart test2
 else
 	docker stop test2
 	docker rm test2
