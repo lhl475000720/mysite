@@ -28,16 +28,16 @@ fi
 
 
 
-requirements_md5_old=$(cat $md5|sed 's/ //g')
-if [ "$requirements_md5_new" == "$requirements_md5_old" ] ; then
-	echo "not change"
-#	bash ./init_docker.sh
-else
-	createrequirementsmd5
-	/root/anaconda3/bin/conda activate test2
-  pip install -r requirements.txt
-  /root/anaconda3/bin/conda deactivate
-#  bash ./init_docker.sh
-fi
+#requirements_md5_old=$(cat $md5|sed 's/ //g')
+#if [ "$requirements_md5_new" == "$requirements_md5_old" ] ; then
+#	echo "not change"
+##	bash ./init_docker.sh
+#else
+#	createrequirementsmd5
+#	/root/anaconda3/bin/conda activate test2
+#  pip install -r requirements.txt
+#  /root/anaconda3/bin/conda deactivate
+##  bash ./init_docker.sh
+#fi
 
 
