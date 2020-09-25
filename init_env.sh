@@ -21,7 +21,7 @@ if [ ! -f $md5 ] ; then
 #  echo "end"
 #  /root/anaconda3/bin/conda init
   source activate /root/anaconda3/envs/test2
-#  pip install -r requirements.txt
+  pip install -r requirements.txt
 #  /root/anaconda3/bin/conda deactivate
 #  bash ./init_docker.sh
   exit
