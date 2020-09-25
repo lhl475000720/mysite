@@ -1,6 +1,6 @@
 cd /home/lei/app
-mkdir test2 test2/conf test2/logs test2/www
-docker cp jenkins-test:/var/jenkins_home/workspace/test01/. /home/lei/app/test2/www
+sudo mkdir test2 test2/conf test2/logs test2/www
+sudo docker cp jenkins-test:/var/jenkins_home/workspace/test01/. /home/lei/app/test2/www
 conda create -n test2 python=3.7
 
 image_name=''
@@ -24,7 +24,7 @@ function createdockerfilemd5() {
 }
 
 function initcontainer(){
-  docker run -p 10010:80 --name=test2 -v /home/lei/app/test2/www/:/user/local/apache2/htdocs/ -v /home/lei/app/test2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf -v /home/lei/app/test2/logs/:/usr/local/apache2/logs/ -v /home/lei/anaconda3/envs/test2:/usr/local/anaconda -d $image_name
+  sudo docker run -p 10010:80 --name=test2 -v /home/lei/app/test2/www/:/user/local/apache2/htdocs/ -v /home/lei/app/test2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf -v /home/lei/app/test2/logs/:/usr/local/apache2/logs/ -v /home/lei/anaconda3/envs/test2:/usr/local/anaconda -d $image_name
 }
 
 if [ ! -f $md5 ] ; then
