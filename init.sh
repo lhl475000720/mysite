@@ -10,4 +10,4 @@ fi
 
 sudo docker cp jenkins-test:/var/jenkins_home/workspace/test2/. /home/lei/app/test2/www
 
-bash ./init_env.sh
+bash init_env.sh
