@@ -33,13 +33,13 @@ function createrequirementsmd5(){
 #  sudo docker run -p 10010:80 --name=test2 -v /home/lei/app/test2/www/:/user/local/apache2/htdocs/ -v /home/lei/app/test2/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf -v /home/lei/app/test2/logs/:/usr/local/apache2/logs/ -v /home/lei/anaconda3/envs/test2:/usr/local/anaconda -d $image_name
 #}
 
-if [ ! -f $md5 ] ; then
-	createrequirementsmd5
-  conda create python=3.7 --prefix=/home/lei/anaconda3/envs/test2
-  conda activate test2
-  pip install -r requirements.txt
-  conda deactivate
-fi
+#if [ ! -f $md5 ] ; then
+#	createrequirementsmd5
+#  conda create python=3.7 --prefix=/home/lei/anaconda3/envs/test2
+#  conda activate test2
+#  pip install -r requirements.txt
+#  conda deactivate
+#fi
 #
 #if [ ! -f $dockerfile_md5 ] ; then
 #  createdockerfilemd5
