@@ -18,7 +18,7 @@ function createrequirementsmd5(){
 
 if [ ! -f $md5 ] ; then
 	createrequirementsmd5
-  /root/anaconda3/bin/conda create -y python=3.7 --prefix=/root/anaconda3/envs/test2
+  source /root/anaconda3/bin/conda create -y python=3.7 --prefix=/root/anaconda3/envs/test2
   echo "end"
 #  /root/anaconda3/bin/conda activate test2
 #  pip install -r requirements.txt
